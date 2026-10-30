@@ -1661,6 +1661,7 @@ async function startServer() {
 
       res.json({ token: newSession('student', st.id, { did: deviceId }), role: 'student' });
     } catch (e: any) {
+      console.error('Login error:', e);
       res.status(e.status || 401).json({ error: e.message || 'حدث خطأ في الاتصال بالخادم' });
     }
   });

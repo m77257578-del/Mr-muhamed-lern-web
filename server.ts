@@ -979,7 +979,13 @@ function getNextGeminiKey(): string {
 const GEMINI_KEY = getGeminiApiKeys().length > 0 && getGeminiApiKeys()[0] !== 'AIzaSyDummyKeyFallback';
 
 /**
- * Enhanced Gemini caller using @google/genai SDK with Search Grounding
+ * Enhanced Gemini caller using @google/genai TypeScript SDK.
+ * 
+ * SETUP FOR VERCEL / ENVIRONMENT:
+ * To use different Gemini models or configure rotation, set the following environment variables in your Vercel project settings or .env file:
+ * 
+ * - GEMINI_API_KEYS: A comma or newline-separated list of API keys for automatic rotation.
+ * - GEMINI_MODEL_NAME: (Optional) Set to 'gemini-1.5-pro' or 'gemini-1.5-flash' to override default.
  */
 async function callGeminiWithRotation(
   contents: any,

@@ -18,6 +18,7 @@ import { ArticlesSection } from './ArticlesSection';
 import { TopStudentsSection } from './TopStudentsSection';
 import { SocialDock } from './SocialDock';
 import { StudyPlanner } from './StudyPlanner';
+import { PWAInstallButton } from './PWAInstallButton';
 import {
   Calendar,
   BookOpen,
@@ -798,6 +799,7 @@ export const StudentSpace: React.FC<StudentSpaceProps> = ({
 
         {/* Quick Top Actions */}
         <div className="flex items-center gap-2.5">
+          <PWAInstallButton />
           <button
             type="button"
             onClick={() => setActiveTab('wallet')}
